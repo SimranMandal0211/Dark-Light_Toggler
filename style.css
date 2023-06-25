@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+input{
+    display: none;
+}
+
+.toggle{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 120px;
+    height: 35px;
+    border-radius: 50px;
+    transition: .2s;
+    border: 2px solid black;
+}
+
+.toggle .ball{
+    position: absolute;
+    top: -21%;
+    left: -5%;
+    width: 33px;
+    height: 31px;
+    margin: 7.5px;
+    border-radius: 50%;
+    transition: .3s ease-out;
+    border: 2px solid black;
+    background-color: black;
+}
+
+.toggle p{
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 180%;
+    left: -90%;
+    width: 34vw;
+    text-align: center;
+}
+
+ /* light mode */
+ .light{
+    background-color: white;
+}
+
+.light .toggle{
+    /* background: linear-gradient(145deg, #e1e1e1, #fff); */
+    background-color: white;
+    box-shadow: 3px 3px 4px #e6e6e6,
+                -3px -3px 4px #ffffff;
+}
+
+.light .toggle .ball{
+    background: black;
+}
+
+ /* dark mode */
+
+ .dark{
+    background-color: black;
+}
+
+.dark .toggle{
+    border: 2px solid white;
+
+    background: white;
+    box-shadow: 3px 3px 3px #0e131b,
+                -3px -3px 3px #1c2739;
+}
+
+.dark .toggle .ball{
+    background: black;
+    transform: translateX(60px);
+    position: absolute;
+    top: -22%;
+    left: 13%;
+}
+
+.dark .toggle p{
+    color: white;
+}
